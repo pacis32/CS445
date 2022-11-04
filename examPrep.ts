@@ -18,7 +18,6 @@ employees = [new Hourly(610001, 15, 6), new Hourly(610002, 16, 8), new Hourly(61
  */
 interface Employee{
     EmpId:number;
-    hoursPerWeek:number;
     calcMonthlyPay():number;
 }
 
