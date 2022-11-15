@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const database= new Map();
+        database.set('Iowa',['Fairfield', 'Iowa City','otumwa'])
+        database.set('Texas',['Dallas', 'Austin','Houston'])
+    window.onload= function(){
+        init();
+        document.getElementById('state').onchange=onchangeFunc;
+    }
+        function init(){
+       let stateOptions=``;
+       for(let state of database.keys()){
+        stateOptions+=`
+        <option value='${state}'>${state}</option>`
+        ;
+       }
+       document.getElementById('state').innerHTML=stateOptions;
+    }
+    
+    function onchangeFunc(event){
+      let cityOptions;
+       for(let city of  database.get(event.target.value)){
+        cityOptions+=`
+        <option value ='${city}'>${city}</option>`
+        ;
+       }
+       document.getElementById('city').innerHTML=cityOptions;
+
+    }
+    </script>
+</head>
+<body>
+    <form action="">
+        <p>
+            States: <select name="" id="state"></select>
+        </p>
+      
+        <p>
+            Cites: <select name="" id="city"></select>
+        </p>
+
+    </form>
+</body>
+</html>

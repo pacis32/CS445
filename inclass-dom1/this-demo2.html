@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" style="font-size: 10px;">10px</button>
+    <button id="btn2" style="font-size: 15px;">15px</button>
+    <button id="btn3" style="font-size: 20px;">20px</button>
+
+    <script>
+
+        function changeSize(unit){
+            return function(){
+                let size = this.style.fontSize; //10px
+                let changedSize =  parseInt(size)+ unit + 'px';
+                this.style.fontSize = changedSize;
+                this.textContent = changedSize;
+            }
+        }
+   
+        document.getElementById('btn1').onclick = changeSize(5);
+        document.getElementById('btn2').onclick = changeSize(6);
+        document.getElementById('btn3').onclick = changeSize(10);
+
+    </script>
+   
+</body>
+</html>

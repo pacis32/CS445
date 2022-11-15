@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Button 1</button> <br />
+    <button id="btn2">Button 2</button>
+    <div id="greeting">Click buttons</div>
+
+    <br />
+    <button id="removeBtn1">Remove Listener for Button 1</button>
+    <button id="removeBtn2">Remove Listener for Button 2</button>
+    <script>
+        const btn1 = document.getElementById('btn1');
+        btn1.onclick = function(){
+            document.getElementById('greeting').textContent = 'Nihao...';
+        }
+
+        btn1.onclick = function(){
+            document.getElementById('greeting').textContent = 'Click buttons';
+            document.getElementById('greeting').style.backgroundColor = 'white';
+        }
+
+        document.getElementById('removeBtn1').onclick = function(){
+            btn1.onclick = null;
+        }
+
+        btn1.onmouseover = function(){
+            document.getElementById('greeting').style.color = 'red';
+        }
+
+        btn1.onmouseleave = function(){
+            document.getElementById('greeting').style.color = 'black';
+        }
+
+        function foo(){
+            document.getElementById('greeting').textContent = 'xiexie...';
+        }
+        document.getElementById('btn2').addEventListener('click', foo);
+
+        function bar(){
+            document.getElementById('greeting').style.backgroundColor = 'blue';
+        }
+        document.getElementById('btn2').addEventListener('click',bar );
+
+        document.getElementById('removeBtn2').onclick = function(){
+            document.getElementById('btn2').removeEventListener('click', foo);
+            document.getElementById('btn2').removeEventListener('click', bar);
+        }
+
+
+    </script>
+</body>
+</html>

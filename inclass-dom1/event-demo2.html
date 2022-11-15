@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button style="font-size: 10px;" onclick="foo(event, 5);">10px</button>
+    <button style="font-size: 15px;" onclick="foo(event, 15);">15px</button>
+    <button style="font-size: 20px;" onclick="foo(event, 8);">20px</button>
+    <script>
+        function foo(e, unit) {
+            let size = e.target.style.fontSize; //10px
+            let changedSize = parseInt(size) + unit + 'px';
+            e.target.style.fontSize = changedSize;
+            e.target.textContent = changedSize;
+        }
+    </script>
+</body>
+
+</html>

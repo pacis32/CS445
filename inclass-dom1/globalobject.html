@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+    <img id="mypuppy" src="puppy.jpg" alt="Puppy" />
+    <p id="warning">Don't sleep in the class!</p>
+    <div>dfdfdfdf</div>
+    <script>
+        let puppyDOMObject = document.getElementById('mypuppy');
+        console.dir(puppyDOMObject);
+        puppyDOMObject.src = 'cat.jfif';
+        console.dir(puppyDOMObject);
+
+        const p = document.getElementById('warning');
+        p.textContent = 'Life is not a struggle, enjoy coding!';
+        console.dir(p);
+    </script>
+</body>
+</html>

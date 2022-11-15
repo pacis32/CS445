@@ -11,21 +11,19 @@
     <button id="btn2" style="font-size: 10px;">15px</button> 
     <button id="btn3" style="font-size: 10px;">20px</button>
     <script>
-        document.getElementById('btn1').addEventListener('click',function(){
-         let size = parseInt('10px') + 5 +'px';
-         document.getElementById('btn1').style.fontSize = size;
+
+       function changeSize(){
+         let size= this.style.fontSize;
+         let changedSize= parseInt(size)+5 +'px';
+          this.style.fontSize=changedSize;
+          this.textContent=changedSize;
+       }
+
+        document.getElementById('btn1').onclick=changeSize;
+        document.getElementById('btn2').onclick=changeSize;
+        document.getElementById('btn3').onclick=changeSize;
+
     
-        });
-
-        document.getElementById('btn2').addEventListener('click',function(){
-        let  btn2 = document.getElementById('btn2').style.fontSize = "15px";
-        
-        });
-
-        document.getElementById('btn3').addEventListener('click',function(){
-            document.getElementById('btn3').style.fontSize ='20px';
-        });
-
 
     </script>
 </body>

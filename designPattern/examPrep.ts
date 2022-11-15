@@ -40,6 +40,6 @@ EmpId:string = 'Dept01';
 employees=[new Hourly(23005,15,8),new Hourly(23006,30,8),new Hourly(23007,20,10),new Hourly(23008,17.5,8)];
 
     calcMonthlyAverageSalaryOfDepartment(){
-        return this.employees.reduce((average, current,index,arr)=> average+current.calcMonthlyPay()/arr.length,0)
+        return this.employees.reduce((average, current,index,arr)=> average + current.calcMonthlyPay()/arr.length,0)
     }
 }

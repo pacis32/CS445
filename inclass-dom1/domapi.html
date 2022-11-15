@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./main.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <p>P1</p>
+    <p>P2</p>
+    <p>P3</p>
+    <p>P4</p>
+    <p>P5</p>
+
+    <div class="mydiv">div1</div>
+    <div class="mydiv">div1</div>
+    <div class="mydiv">div1</div>
+    <div class="mydiv">div1</div>
+    <div>not included</div>
+
+    <script>
+        let divs = document.getElementsByClassName('mydiv'); //[]
+        for (let obj of divs) {
+            let original = obj.textContent;
+            obj.textContent = original + ' mydivs....'
+        }
+
+
+        let div1 = document.querySelector('.mydiv'); //return the first one
+        let original = div1.textContent;
+        div1.textContent = original + ' changed using queryselector..';
+
+
+        let divObjects = document.querySelectorAll('.mydiv'); //return an array
+        for(let div of divObjects) {
+            div.classList.add('warning');
+        }
+
+
+        let objects = document.getElementsByTagName('p');
+        // console.log(objects);    
+        // for(let i = 0; i < objects.length; i++){
+        //     let original = objects[i].textContent;
+        //     objects[i].textContent = original + ' something';
+        // } 
+
+        for (let obj of objects) {
+            let original = obj.textContent;
+            obj.textContent = original + ' something....'
+        }
+
+
+    </script>
+</body>
+
+</html>
