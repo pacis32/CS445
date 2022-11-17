@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload= function (){
+            document.getElementById('btn').onclick=function (){
+            let img1= document.getElementById('im1');
+            let img2= document.getElementById('im2');
+            let temp=img1.src;
+            img1.src=img2.src;
+            img2.src=temp;
+
+        }
+
+    }
+           
+    </script>
+</head>
+<body>
+   <div>
+    <img  id="im1" style ="width: 200px; height: 100px;" src="/inClass/finalPrep/Dom/picture1.avif" alt="">
+   </div>
+   <button id="btn">Swap</button>
+   <br>
+   <div>
+    <img id="im2" style ="width: 200px; height: 100px; margin-top: 10px ;" src="/inClass/finalPrep/Dom/photo2.avif" alt="">
+   </div>
+
+</body>
+</html>
