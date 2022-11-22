@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload= function (){
+            loadTable("https://example.com/students",document.querySelector('table'))
+        }
+
+       async function loadTable(url,table){
+        const tableHead=document.querySelector('thead');
+        const tablebody=document.querySelector('tbody')
+
+        const response=  await fetch(url);
+        const  data= await promise.json();  
+
+        document.querySelector('thead')='';
+        document.querySelector('thead')='';
+
+        for(let tablehead of data){
+            document.createElement('th');
+        }
+
+             
+        }
+       
+    </script>
+</head>
+<body>
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
